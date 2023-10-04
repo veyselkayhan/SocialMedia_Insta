@@ -16,8 +16,8 @@ import javax.persistence.Table;
 @AllArgsConstructor
 @Embeddable
 public class BaseEntity {
-    Long create;
-    Long update;
+    Long createAt;
+    Long updateAt;
     Boolean state;
 
 

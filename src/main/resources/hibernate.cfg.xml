@@ -28,11 +28,10 @@
                 @Entity ile işaretlenmemiş hiç bir sınıfı kullanamaz.
         -->
         <mapping class="com.veysel.repository.entity.User"></mapping>
-
-
-
-
+        <mapping class="com.veysel.repository.entity.Following"></mapping>
+        <mapping class="com.veysel.repository.entity.Follower"></mapping>
 
 
     </session-factory>
 </hibernate-configuration>
+

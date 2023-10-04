@@ -9,18 +9,19 @@ import org.hibernate.cfg.Configuration;
 
  */
 public class HibernateUtility {
-    private static final SessionFactory SESSION;
+    private  static final SessionFactory SESSION;
 
-    static {
-        try {
-//            SESSION = new Configuration().configure("c:\\config\\hibernate.cfg.xml").buildSessionFactory();
-        SESSION = new Configuration().configure().buildSessionFactory();
-        } catch (Exception exception) {
-            System.out.println("Hibarnate başlatılırken hata olustu :" + exception);
+    static{
+        try{
+            //SESSION = new Configuration().configure("C:\\config\\hibernate.cfg.xml").buildSessionFactory();
+            //--Elle ayarlama(GitHub den, localden vs alinabilir)
+            SESSION = new Configuration().configure().buildSessionFactory();
+        }catch (Exception exception){
+            System.out.println("Hibernate baslatilirken hata olustu: " + exception);
             throw new ExceptionInInitializerError(exception);
         }
-
     }
+
     public static SessionFactory getSessionFactory(){
         return SESSION;
     }

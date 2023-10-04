@@ -22,7 +22,9 @@ public class Following {
     long id;
     long userid;
     long followingUserId;
+    @Enumerated
     FollowState followState;
     @Embedded
     BaseEntity baseEntity;
+
 }
